@@ -1,2 +1,1 @@
-# Crework
 # Crework beginner cohort 
