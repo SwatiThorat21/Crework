@@ -1,20 +1,59 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1.3rem;
-    margin-top: 4em;
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.3rem;
+  margin-top: 4em;
 }
-#form{
-    border: red solid 2px;
-    width: 18em;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    
-    
+#form {
+  margin: auto;
+  display: block;
+  width: 17em;
+  text-align: center;
+}
+
+.button {
+  padding: 0.4em;
+  border: solid rgb(207, 206, 206);
+  font-weight: 600;
+  border-radius: 0.35em;
+  width: 100%;
+  font-size: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 0.35em;
+  border: solid rgb(207, 206, 206);
+  font-size: 1rem;
+  margin-top: 0.8em;
+}
+
+.lable-input {
+  display: inline;
+  float: left;
+  margin-top: 0.8em;
+}
+
+#heading {
+  font-size: 1.7rem;
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+.gender-lable{
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em; 
+
+}
+#gender {
+   text-align: left;
+   margin: 0.8em;
+   line-height: 1.6em;
 }

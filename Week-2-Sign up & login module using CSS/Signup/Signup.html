@@ -14,40 +14,46 @@
   <body>
     <div id="form">
     <form>
-      <h1>Sign Up</h1>
-      <button type="submit">Sign Up With Google</button>
+      <h1 id="heading">Sign Up</h1>
+      <button type="submit" class="button">Sign Up With Google</button>
       <div>
-        <div><lable>Name</lable></div>
+        <div><lable class="lable-input">Name</lable></div>
         <div>
           <input type="text" name="name" placeholder="Enter full name" />
         </div>
       </div>
 
       <div>
-        <div><label>Email</label></div>
+        <div><label class="lable-input">Email</label></div>
         <div>
           <input type="email" name="email" placeholder="Enter email" />
         </div>
       </div>
 
       <div>
-        <div><label>Password</label></div>
+        <div><label class="lable-input">Password</label></div>
         <div>
           <input type="password" name="password" placeholder="Enter password"/>
         </div>
       </div>
 
-      <div>
-        <div><label>Gender:</label></div>
+      <div id="gender">
+        <div>Gender:</div>
         <div>
+          <label class="gender-lable">
           <input type="radio" name="gender" />Male
+        </label>
+        <label class="gender-lable">
           <input type="radio" name="gender" />Female
+        </label>
+        <label class="gender-lable">
           <input type="radio" name="gender" />Other
+          </label>
         </div>
       </div>
 
-      <div>
-        <div><label>Select Country</label>&nbsp;</div>
+      <div id="select">
+        <div>Select Country</div>
         <div>
           <select name="country">
           <option value="Country">India</option>
@@ -66,11 +72,11 @@
       </div>
 
       <div>
-        <button type="submit">Sign Up</button>
+        <button type="submit" class="button">Sign Up</button>
       </div>
       <div>
       <p>Already have an account?</p>
-      <a href="#">Log in</a>
+      <a href="login.html">Log in</a>
       </div>
     </form>
     </div>
