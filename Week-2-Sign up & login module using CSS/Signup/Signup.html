@@ -12,10 +12,12 @@
     <title>Sign Up Module</title>
   </head>
   <body>
+  
     <div id="form">
     <form>
       <h1 id="heading">Sign Up</h1>
       <button type="submit" class="button">Sign Up With Google</button>
+      <hr>
       <div>
         <div><lable class="lable-input">Name</lable></div>
         <div>
@@ -37,16 +39,16 @@
         </div>
       </div>
 
-      <div id="gender">
+      <div id="radio">
         <div>Gender:</div>
         <div>
-          <label class="gender-lable">
+          <label class="radio-lable">
           <input type="radio" name="gender" />Male
         </label>
-        <label class="gender-lable">
+        <label class="radio-lable">
           <input type="radio" name="gender" />Female
         </label>
-        <label class="gender-lable">
+        <label class="radio-lable">
           <input type="radio" name="gender" />Other
           </label>
         </div>
@@ -55,7 +57,7 @@
       <div id="select">
         <div>Select Country</div>
         <div>
-          <select name="country">
+          <select name="country" id="select-country">
           <option value="Country">India</option>
           <option value="Country">USA</option>
           <option value="Country">UK</option>
@@ -66,19 +68,21 @@
         </div>
       </div>
 
-      <div>
-        <input type="checkbox" />I agree <a href="#">Terms</a> &
-        <a href="#">Privacy</a>
+      <div id="terms">
+        <input type="checkbox" />
+        <lable>I agree <a href="#">Terms</a> & <a href="#">Privacy</a></lable>
       </div>
 
       <div>
         <button type="submit" class="button">Sign Up</button>
       </div>
+      <hr>
       <div>
-      <p>Already have an account?</p>
+      <p id="already-account">Already have an account?</p>
       <a href="login.html">Log in</a>
       </div>
     </form>
     </div>
+  
   </body>
 </html>

@@ -6,13 +6,15 @@
 
 body {
   font-family: "Ubuntu", sans-serif;
-  font-size: 1.3rem;
-  margin-top: 4em;
+  font-size: 1.25rem;
+  margin-top: 2.5em;
+  background-color: #27272c;
+  color: #d7d7da;
 }
 #form {
   margin: auto;
   display: block;
-  width: 17em;
+  width: 18em;
   text-align: center;
 }
 
@@ -23,6 +25,23 @@ body {
   border-radius: 0.35em;
   width: 100%;
   font-size: 1rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #914ccd;
+}
+
+.button:hover {
+background-color: #27272c;
+border: 0.2em solid #914ccd;
+color:#914ccd;
+
+}
+a{
+  color:#d7d7da;
+ 
+}
+a:hover {
+  color:#8240bb;
 }
 
 input {
@@ -32,6 +51,8 @@ input {
   border: solid rgb(207, 206, 206);
   font-size: 1rem;
   margin-top: 0.8em;
+  background-color: #1e1d20;
+  color: #c5c5ce;
 }
 
 .lable-input {
@@ -41,19 +62,46 @@ input {
 }
 
 #heading {
-  font-size: 1.7rem;
+  font-size: 2.2rem;
   margin-bottom: 0.5em;
   text-align: left;
 }
 
-.gender-lable{
+.radio-lable {
   display: grid;
-  grid-template-columns: 1em auto;
-  gap: 0.5em; 
-
+  grid-template-columns: 0.7em auto;
+  gap: 0.6em;
+  cursor: pointer;
 }
-#gender {
-   text-align: left;
-   margin: 0.8em;
-   line-height: 1.6em;
+
+#radio {
+  text-align: left;
+  margin: 0.8em;
+  line-height: 1.6em;
+}
+#select {
+  display: inline;
+  text-align: left;
+}
+#select-country {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 0.35em;
+  border: solid rgb(207, 206, 206);
+  font-size: 1rem;
+  margin-top: 0.8em;
+  background-color: #1e1d20;
+  color: #c5c5ce;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+#terms {
+}
+
+:root {
+  --gradient: var(--color-secondary) 10%, var(--color-yellow) 25%,
+    var(--color-green) 50%, var(--color-blue) 75%, var(--color-primary) 90%;
 }
