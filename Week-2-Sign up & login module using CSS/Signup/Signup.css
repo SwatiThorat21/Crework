@@ -96,12 +96,16 @@ input {
 
 input[type="checkbox"] {
   cursor: pointer;
+  vertical-align: super;
+  margin-right: 1em;
 }
 
-#terms {
+#terms{
+  display: flex;
+  align-items: center;
+
 }
 
-:root {
-  --gradient: var(--color-secondary) 10%, var(--color-yellow) 25%,
-    var(--color-green) 50%, var(--color-blue) 75%, var(--color-primary) 90%;
-}
+
+
+

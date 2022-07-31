@@ -4,85 +4,90 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Signup.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Signup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Sign Up Module</title>
   </head>
   <body>
-  
     <div id="form">
-    <form>
-      <h1 id="heading">Sign Up</h1>
-      <button type="submit" class="button">Sign Up With Google</button>
-      <hr>
-      <div>
-        <div><lable class="lable-input">Name</lable></div>
+      <form>
+        <h1 id="heading">Sign Up</h1>
+        <button type="submit" class="button">Sign Up With Google</button>
+        <hr />
         <div>
-          <input type="text" name="name" placeholder="Enter full name" />
+          <div><lable class="lable-input">Name</lable></div>
+          <div>
+            <input type="text" name="name" placeholder="Enter full name" />
+          </div>
         </div>
-      </div>
 
-      <div>
-        <div><label class="lable-input">Email</label></div>
         <div>
-          <input type="email" name="email" placeholder="Enter email" />
+          <div><label class="lable-input">Email</label></div>
+          <div>
+            <input type="email" name="email" placeholder="Enter email" />
+          </div>
         </div>
-      </div>
 
-      <div>
-        <div><label class="lable-input">Password</label></div>
         <div>
-          <input type="password" name="password" placeholder="Enter password"/>
+          <div><label class="lable-input">Password</label></div>
+          <div>
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter password"
+            />
+          </div>
         </div>
-      </div>
 
-      <div id="radio">
-        <div>Gender:</div>
+        <div id="radio">
+          <div>Gender:</div>
+          <div>
+            <label class="radio-lable">
+              <input type="radio" name="gender" />Male
+            </label>
+            <label class="radio-lable">
+              <input type="radio" name="gender" />Female
+            </label>
+            <label class="radio-lable">
+              <input type="radio" name="gender" />Other
+            </label>
+          </div>
+        </div>
+
+        <div id="select">
+          <div>Select Country</div>
+          <div>
+            <select name="country" id="select-country">
+              <option value="Country">India</option>
+              <option value="Country">USA</option>
+              <option value="Country">UK</option>
+              <option value="Country">Russia</option>
+              <option value="Country">China</option>
+              <option value="Country">Germany</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="terms">
+          <div><input type="checkbox"></div>
+          <div>I agree <a href="#">Terms</a> & <a href="#">Privacy</a></div>
+        </div>
+
         <div>
-          <label class="radio-lable">
-          <input type="radio" name="gender" />Male
-        </label>
-        <label class="radio-lable">
-          <input type="radio" name="gender" />Female
-        </label>
-        <label class="radio-lable">
-          <input type="radio" name="gender" />Other
-          </label>
+          <button type="submit" class="button">Sign Up</button>
         </div>
-      </div>
-
-      <div id="select">
-        <div>Select Country</div>
+        <hr />
         <div>
-          <select name="country" id="select-country">
-          <option value="Country">India</option>
-          <option value="Country">USA</option>
-          <option value="Country">UK</option>
-          <option value="Country">Russia</option>
-          <option value="Country">China</option>
-          <option value="Country">Germany</option>
-          </select>
+          <p id="already-account">Already have an account?</p>
+          <a href="login.html">Log in</a>
         </div>
-      </div>
-
-      <div id="terms">
-        <input type="checkbox" />
-        <lable>I agree <a href="#">Terms</a> & <a href="#">Privacy</a></lable>
-      </div>
-
-      <div>
-        <button type="submit" class="button">Sign Up</button>
-      </div>
-      <hr>
-      <div>
-      <p id="already-account">Already have an account?</p>
-      <a href="login.html">Log in</a>
-      </div>
-    </form>
+      </form>
     </div>
-  
   </body>
 </html>

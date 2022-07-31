@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log-In Module</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+  <title>Log-In Module</title>
+  </head>
+  <body>
+    <div id="form">
     <form>
-      <h1>Log in</h1>
-      <button type="submit">Log in With Google</button>
-    </form>
-
+      <h1 id="heading">Log in</h1>
+      <button type="submit" class="button">Log in With Google</button>
+    
     <div>
-       <div><label>Email</label></div>
-       <div><input type="email" placeholder="example@gmail.com"></div>&nbsp;
+      <div><label class="lable-input">Email</label></div>
+      <div><input type="email" placeholder="example@gmail.com" /></div>
+      &nbsp;
     </div>
 
     <div>
-        <div><label>Password</label></div>
-        <div><input type="password" placeholder="********"></div>
+      <div><label class="lable-input">Password</label></div>
+      <div><input type="password" placeholder="********" /></div>
     </div>
 
     <div>
-        <div><input type="checkbox"> Remember me</div>
-        <div>
-        <button type="submit">Log in</button>
+      <div><input type="checkbox" /> Remember me</div>
+      <div>
+        <button type="submit" class="button">Log in</button>
         <a href="#">Forgot Password?</a>
-        <p>Don't have an account?</p><a href="#">Sign up</a>
-        </div>
+        <p>Don't have an account?</p>
+        <a href="#">Sign up</a>
+      </div>
     </div>
-</body>
+    </form>
+    </div>
+  </body>
 </html>
