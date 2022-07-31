@@ -1,69 +1,85 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 1.25rem;
-    margin-top: 2.5em;
-    background-color: #27272c;
-    color: #d7d7da;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  #form {
-    margin: auto;
-    display: block;
-    width: 18em;
-    text-align: center;
-  }
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.25rem;
+  margin-top: 2.5em;
+  background-color: #27272c;
+  color: #d7d7da;
+}
 
-  .button {
-    padding: 0.4em;
-    border: solid rgb(207, 206, 206);
-    font-weight: 600;
-    border-radius: 0.35em;
-    width: 100%;
-    font-size: 1rem;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    background-color: #914ccd;
-  }
-  .button:hover {
-    background-color: #27272c;
-    border: 0.2em solid #914ccd;
-    color:#914ccd;
-    
-    }
-    a{
-      color:#d7d7da;
-     
-    }
-    a:hover {
-      color:#8240bb;
-    }
+#form {
+  margin: auto;
+  display: block;
+  width: 18em;
+  text-align: center;
+}
 
-  input {
-    width: 100%;
-    padding: 0.5em;
-    border-radius: 0.35em;
-    border: solid rgb(207, 206, 206);
-    font-size: 1rem;
-    margin-top: 0.8em;
-    background-color: #1e1d20;
-    color: #c5c5ce;
-  }
+.button {
+  padding: 0.4em;
+  border: solid rgb(207, 206, 206);
+  font-weight: 600;
+  border-radius: 0.35em;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: #914ccd;
+}
 
-  .lable-input {
-    display: inline;
-    float: left;
-    margin-top: 0.8em;
-  }
+.button:hover {
+  background-color: #27272c;
+  border: 0.2em solid #914ccd;
+  color: #914ccd;
+}
 
-  #heading {
-    font-size: 2.2rem;
-    margin-bottom: 0.5em;
-    text-align: left;
-  }
-  
+a {
+  color: #d7d7da;
+}
+
+a:hover {
+  color: #8240bb;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 0.35em;
+  border: solid rgb(207, 206, 206);
+  font-size: 1rem;
+  margin-top: 0.8em;
+  background-color: #1e1d20;
+  color: #c5c5ce;
+}
+
+.lable-input {
+  display: inline;
+  float: left;
+  margin-top: 0.8em;
+}
+
+#heading {
+  font-size: 2.2rem;
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  vertical-align: super;
+  margin-right: 1em;
+}
+
+#rememberMe {
+  display: flex;
+  align-items: center;
+  margin-top: 0.7em;
+}
+
+.para-margin {
+    margin:0.7em;
+}
