@@ -28,6 +28,7 @@ body {
   margin-top: 1em;
   margin-bottom: 1em;
   background-color: #914ccd;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -72,6 +73,7 @@ input {
   grid-template-columns: 0.7em auto;
   gap: 0.6em;
   cursor: pointer;
+  font-size: 0.9em;
 }
 
 #radio {
@@ -92,6 +94,7 @@ input {
   margin-top: 0.8em;
   background-color: #1e1d20;
   color: #c5c5ce;
+  cursor: pointer;
 }
 
 input[type="checkbox"] {
