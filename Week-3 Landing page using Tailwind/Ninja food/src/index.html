@@ -5,25 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Ninja</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/dist/output.css">
   </head>
-  <body class="text-red-600">
+  <body class="text-gray-600 font-body">
     <div>
       <!--content wrapper-->
       <div>
         <nav>
           <div>
-            <h1 class="font-bold uppercase">
+            <h1 class="font-bold uppercase p-4 border-b border-gray-100">
               <a href="/">Food Ninja</a>
             </h1>
           </div>
           <ul>
-            <li>
+            <li class="text-gray-700 font-bold">
               <a href="#">
                 <span>Home</span>
               </a>
             </li>
-            <li>
+            <li> 
               <a href="#">
                 <span>About</span>
               </a>
@@ -38,23 +38,23 @@
       </div>
       <!-- end nav -->
 
-      <main>
-        <div>
-          <a href="#">Log in</a>
-          <a href="#">Sign up</a>
+      <main class="px-16 py-6">
+        <div class="flex justify-center md:justify-end">
+          <a href="#" class="text-primary">Log in</a>
+          <a href="#" class="text-primary ml-3">Sign up</a>
         </div>
 
         <header>
-          <h2>Recipes</h2>
-          <h3>For Ninjas</h3>
+          <h2 class="text-gray-700 text-6xl font-semibold">Recipes</h2>
+          <h3 class="text-2xl font-semibold">For Ninjas</h3>
         </header>
 
         <div>
-          <h4>Latest Recipes</h4>
-          <div>
+          <h4 class="font-bold pb-2 mt-12 border-b border-gray-200">Latest Recipes</h4>
+          <div class="mt-8">
             <!-- cards go here -->
             <div>
-              <img src="img/lentil-soup.jpg" alt="stew" />
+              <img src="img/lentil-soup (4).jpg" alt="stew" />
               <div>
                 <span>5 Bean chilli stew</span>
                 <span>Recipe by Mario</span>
@@ -63,16 +63,18 @@
             <!-- cards ends here -->
           </div>
 
-          <h4>Most popular</h4>
-          <div>
+          <h4 class="font-bold pb-2 mt-12 border-gray-200">Most popular</h4>
+
+          <div class="mt-8">
             <!-- cards go here -->
           </div>
 
-          <div>
+          <div class="flex justify-center">
             <div>Load More</div>
           </div>
         </div>
       </main>
     </div>
+
   </body>
 </html>
