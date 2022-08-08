@@ -623,8 +623,8 @@ video {
   cursor: pointer;
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.grid-cols-10\/20\/70 {
+  grid-template-columns: 15% auto auto;
 }
 
 .items-center {
