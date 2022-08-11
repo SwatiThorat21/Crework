@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Signup.css" />
+    <link rel="stylesheet" href="../css/Signup.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +18,7 @@
     <div id="form">
       <form>
         <h1 id="heading">Sign Up</h1>
-        <button type="submit" class="button">Sign Up With Google</button>
+        <button type="submit" class="button" id="button">Sign Up With Google</button>
         <hr />
         <div>
           <div><lable class="lable-input">Name</lable></div>
@@ -27,7 +27,7 @@
               type="text"
               name="name"
               placeholder="Enter full name"
-              required
+              
             />
           </div>
         </div>
@@ -36,11 +36,11 @@
           <div><label class="lable-input">Email</label></div>
           <div>
             <input
-              type="email"
+              type="text"
               name="email"
               placeholder="Enter email"
-              required
-            />
+              value=""
+              id="email">
           </div>
         </div>
 
@@ -51,7 +51,7 @@
               type="password"
               name="password"
               placeholder="Enter password"
-              required
+              
             />
           </div>
         </div>
@@ -89,9 +89,9 @@
           <div><input type="checkbox" /></div>
           <div>I agree <a href="#">Terms</a> & <a href="#">Privacy</a></div>
         </div>
-
+        
         <div>
-          <button type="submit" class="button">Sign Up</button>
+          <button type="submit" class="button" onclick="emailValidate()" >Sign Up</button>
         </div>
         <hr />
         <div>
@@ -100,5 +100,6 @@
         </div>
       </form>
     </div>
+    <script src="../js/signup.js"></script>
   </body>
 </html>
