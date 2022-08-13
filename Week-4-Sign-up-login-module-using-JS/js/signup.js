@@ -1,18 +1,17 @@
-function emailValidate(e) {
+function formValidate() {
+  
   let inputText = document.getElementById("email").value;
 
-  // if(inputText.indexOf('@')<1){
-  //     alert('Please add @');
-  //     return false;
-  // }
-
-  let mailFormat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+  let mailFormat = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
   if (!inputText.match(mailFormat)) {
     document.getElementById("errorMsg").style.display = "block";
+    return false;
   }
-  e.preventDefault();
-  return false;
-    
+  else{
+    document.getElementById("errorMsg").style.display = "none";
+    return true;
+   }
+      
 }
 
