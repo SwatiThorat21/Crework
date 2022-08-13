@@ -26,9 +26,10 @@
               type="text"
               name="name"
               placeholder="Enter full name"
-              
+              id="name"
             />
           </div>
+          <div id="name-error" style="display: none">&#9888 Enter a full name!</div>
         </div>
 
         <div>
@@ -41,7 +42,7 @@
               value=""
               id="email">
           </div>
-          <div id="errorMsg" style="display: none">&#9888 Enter a valid email address!</div>
+          <div id="mail-error" style="display: none">&#9888 Enter a valid email address!</div>
         </div>
 
         <div>
@@ -51,9 +52,11 @@
               type="password"
               name="password"
               placeholder="Enter password"
-              
+              id="password"
             />
           </div>
+          <div id="pass-error1" style="display: none">&#9888 Enter minimum one number!</div>
+          <div id="pass-error2" style="display: none">&#9888 Password length should be min 4 & max 12!</div>
         </div>
 
         <div id="radio">
