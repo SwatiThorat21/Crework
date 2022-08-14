@@ -84,3 +84,13 @@ input[type="checkbox"] {
 .para-margin {
     margin:0.7em;
 }
+
+.error-msg{
+  color: rgb(221, 34, 34);
+  font-size: 0.85em;
+}
+
+.input{
+border-color: rgb(221, 34, 34);
+border-width: 0.3em;
+}
