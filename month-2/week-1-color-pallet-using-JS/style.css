@@ -1,27 +1,36 @@
 body {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family:monospace;
-background-color: gray;
-display: flex;
-flex-direction: column;
-align-items: center;
-font-size: 1rem;
-margin-top: 18em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-1 {
+  font-family: monospace;
+  background-color: gray;
+  font-size: 1rem;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
 }
 
 h1 {
-    font-size: 2.3em;
+  font-size: 2.3em;
+}
+
+.container-2 {
+  margin-top: 15em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .generator {
-padding: 0.8em;
-background-color: black;
-color: white;
-font-family: monospace;
-border-radius: 0.5em;
+  padding: 0.8em;
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  border-radius: 0.5em;
 }
-
-
-
