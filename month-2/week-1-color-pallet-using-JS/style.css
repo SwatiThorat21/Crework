@@ -7,9 +7,21 @@ background-color: gray;
 display: flex;
 flex-direction: column;
 align-items: center;
-margin-top: 25em;
+font-size: 1rem;
+margin-top: 18em;
 }
 
+h1 {
+    font-size: 2.3em;
+}
+
+.generator {
+padding: 0.8em;
+background-color: black;
+color: white;
+font-family: monospace;
+border-radius: 0.5em;
+}
 
 
 
