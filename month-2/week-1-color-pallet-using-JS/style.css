@@ -1,0 +1,15 @@
+body {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family:monospace;
+background-color: gray;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 25em;
+}
+
+
+
+
