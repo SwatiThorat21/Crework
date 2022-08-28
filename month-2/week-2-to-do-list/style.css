@@ -66,6 +66,7 @@ body{
     background-color: #790979;
     margin-right: -2px;
     color: white;
+    cursor: pointer;
   
 }
 
@@ -92,6 +93,7 @@ body{
     font-size: 1em;
     font-weight: 800;
     background-color: #790979;
+    cursor: pointer;
 }
 
 
