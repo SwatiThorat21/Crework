@@ -3,7 +3,7 @@ showList();
 let addBtn = document.querySelector(".add-btn");
 
 addBtn.addEventListener("click", (element) => {
-  let addInput = document.getElementById("addInput").value;
+  let addInput = document.getElementById("addInput");
   let list = localStorage.getItem('list');
   if(list == null){
     listObj = [];
@@ -11,9 +11,9 @@ addBtn.addEventListener("click", (element) => {
   else{
     listObj = JSON.parse(list);
   }
-  listObj.push(addInput);
+  listObj.push(addInput.value);
   localStorage.setItem("list", JSON.stringify(listObj));
-  addInput = "";
+  addInput.value = "";
   showList();
 });
 
