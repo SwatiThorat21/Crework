@@ -95,6 +95,10 @@ body{
     background-color: #790979;
     cursor: pointer;
 }
+.error-msg{
+    color: rgb(221, 34, 34);
+    font-size: 0.85em;
+  }
 
 
 
