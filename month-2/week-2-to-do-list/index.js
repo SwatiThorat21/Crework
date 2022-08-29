@@ -4,11 +4,11 @@ let addBtn = document.querySelector(".add-btn");
 
 addBtn.addEventListener("click", () => {
   let addInput = document.getElementById("addInput");
-  // if (addInput.value = "") {
-  //   document.getElementById('input-error').style.display = "block";
-  //   // document.getElementById("input-error").classList.add("error-msg");
-  //   return;
-  // }
+  if (addInput.value == "") {
+    document.getElementById('input-error').style.display = "block";
+    // document.getElementById("input-error").classList.add("error-msg");
+    return;
+  }
   let list = localStorage.getItem("list");
   if (list == null) {
     listObj = [];
@@ -48,24 +48,28 @@ function showList() {
   } else {
     listItems.innerHTML = `Please add your To Do !!`;
   }
-}
 
-let deleteBtn = document.querySelector(".deleteBtn");
-deleteBtn.addEventListener("click", (index) => {
+  let deleteBtns = document.querySelectorAll(".deleteBtn");
+  deleteBtns.forEach((deleteBtn) => {
+  deleteBtn.addEventListener("click", (index) => {
   let list = localStorage.getItem("list");
   listObj = JSON.parse(list);
   listObj.splice(index, 1);
   localStorage.setItem("list", JSON.stringify(listObj));
   showList();
+  });
 });
+}
+
+
 
 // let liElement = document.getElementsByClassName('li-element');
 // liElement.type = 'text';
 // liElement.setAttribute('readonly', 'readonly');
 
 
-let editBtn = document.querySelector(".editBtn");
-editBtn.addEventListener('click', () => {
-  let list = localStorage.getItem("list");
-  listObj = JSON.parse(list);
-});
+// let editBtn = document.querySelector(".editBtn");
+// editBtn.addEventListener('click', () => {
+//   let list = localStorage.getItem("list");
+//   listObj = JSON.parse(list);
+// });
