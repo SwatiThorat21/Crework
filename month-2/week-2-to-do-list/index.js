@@ -35,7 +35,7 @@ function showList() {
     html += `
     <ul>            
     <div class="li-items"> 
-    <li> ${element}</li>
+    <li class="li-element"> ${element}</li>
     <div id="i-tags">
     <i class="fa-regular editBtn fa-pen-clip"></i>
     <i class="fa-regular deleteBtn fa-trash-can"></i>
@@ -46,7 +46,7 @@ function showList() {
   if (listObj.length != 0) {
     listItems.innerHTML = html;
   } else {
-    listItems.innerHTML = `Please add a note !!`;
+    listItems.innerHTML = `Please add your To Do !!`;
   }
 }
 
@@ -57,4 +57,15 @@ deleteBtn.addEventListener("click", (index) => {
   listObj.splice(index, 1);
   localStorage.setItem("list", JSON.stringify(listObj));
   showList();
+});
+
+// let liElement = document.getElementsByClassName('li-element');
+// liElement.type = 'text';
+// liElement.setAttribute('readonly', 'readonly');
+
+
+let editBtn = document.querySelector(".editBtn");
+editBtn.addEventListener('click', () => {
+  let list = localStorage.getItem("list");
+  listObj = JSON.parse(list);
 });
