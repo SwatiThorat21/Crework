@@ -6,7 +6,7 @@ addBtn.addEventListener("click", () => {
   let addInput = document.getElementById("addInput");
   if (addInput.value == "") {
     document.getElementById('input-error').style.display = "block";
-    // document.getElementById("input-error").classList.add("error-msg");
+    document.getElementById("input-error").classList.add("error-msg");
     return;
   }
   let list = localStorage.getItem("list");

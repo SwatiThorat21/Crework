@@ -97,7 +97,8 @@ body{
 }
 .error-msg{
     color: rgb(221, 34, 34);
-    font-size: 0.85em;
+    font-size: 1em;
+    text-align: center;
   }
 
 
