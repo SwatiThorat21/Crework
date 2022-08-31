@@ -33,13 +33,14 @@ function showList() {
   let html = "";
   listObj.forEach((element) => {
     html += `
-         
-    <div class="li-item" onClick ="setLineThrough"> 
+    <ul>  
+    <div class="li-item"> 
     <input value="${element}" class="li-element" readonly/>
     <div id="i-tags">
     <i class="fa-regular editBtn fa-pen-clip"></i>
     <i class="fa-regular deleteBtn fa-trash-can"></i>
     </div>
+    </ul>
     `;
   });
   let listItems = document.getElementById("listItems");
@@ -63,9 +64,8 @@ function showList() {
   let editBtns = document.querySelectorAll(".editBtn");
   editBtns.forEach((editBtn) => {
     editBtn.addEventListener("click", (event) => {
-      let list = localStorage.getItem("list");
-      listObj = JSON.parse(list);
-      listObj[index].removeAttribute('readonly');
+      let input = event.target.parentElement.parentElement.querySelector('input');
+      input.removeAttribute('readonly');
     });
   });
 }
