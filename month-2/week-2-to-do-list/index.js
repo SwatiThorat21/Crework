@@ -5,7 +5,7 @@ let addBtn = document.querySelector(".add-btn");
 addBtn.addEventListener("click", () => {
   let addInput = document.getElementById("addInput");
   if (addInput.value == "") {
-    document.getElementById('input-error').style.display = "block";
+    document.getElementById("input-error").style.display = "block";
     document.getElementById("input-error").classList.add("error-msg");
     return;
   }
@@ -17,7 +17,7 @@ addBtn.addEventListener("click", () => {
   }
   listObj.push(addInput.value);
   localStorage.setItem("list", JSON.stringify(listObj));
- 
+
   addInput.value = "";
   showList();
 });
@@ -33,14 +33,14 @@ function showList() {
   let html = "";
   listObj.forEach((element) => {
     html += `
-    <ul>            
-    <div class="li-items"> 
-    <li class="li-element"> ${element}</li>
+         
+    <div class="li-item" onClick ="setLineThrough"> 
+    <input value="${element}" class="li-element" readonly/>
     <div id="i-tags">
     <i class="fa-regular editBtn fa-pen-clip"></i>
     <i class="fa-regular deleteBtn fa-trash-can"></i>
     </div>
-    </ul> `;
+    `;
   });
   let listItems = document.getElementById("listItems");
   if (listObj.length != 0) {
@@ -51,25 +51,32 @@ function showList() {
 
   let deleteBtns = document.querySelectorAll(".deleteBtn");
   deleteBtns.forEach((deleteBtn) => {
-  deleteBtn.addEventListener("click", (index) => {
-  let list = localStorage.getItem("list");
-  listObj = JSON.parse(list);
-  listObj.splice(index, 1);
-  localStorage.setItem("list", JSON.stringify(listObj));
-  showList();
+    deleteBtn.addEventListener("click", (index) => {
+      let list = localStorage.getItem("list");
+      listObj = JSON.parse(list);
+      listObj.splice(index, 1);
+      localStorage.setItem("list", JSON.stringify(listObj));
+      showList();
+    });
   });
-});
+
+  let editBtns = document.querySelectorAll(".editBtn");
+  editBtns.forEach((editBtn) => {
+    editBtn.addEventListener("click", (event) => {
+      let list = localStorage.getItem("list");
+      listObj = JSON.parse(list);
+      listObj[index].removeAttribute('readonly');
+    });
+  });
 }
 
+document.addEventListener('click', (event) => {
+  if(event.target.classList.contains('li-element')){
+    if (event.target.style.textDecoration == "line-through") {
+      event.target.style.textDecoration = "";
+    } else {
+      event.target.style.textDecoration = "line-through";
+    }
+  }
 
-
-// let liElement = document.getElementsByClassName('li-element');
-// liElement.type = 'text';
-// liElement.setAttribute('readonly', 'readonly');
-
-
-// let editBtn = document.querySelector(".editBtn");
-// editBtn.addEventListener('click', () => {
-//   let list = localStorage.getItem("list");
-//   listObj = JSON.parse(list);
-// });
+});
