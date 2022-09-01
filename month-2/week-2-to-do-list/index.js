@@ -112,15 +112,4 @@ checkbox.forEach((checklist) => {
   });
 });
 
-// function taskComplete() {
-//   let checkbox = document.getElementsByClassName("checkbox");
-//   checkbox.addEventListener("click", (event) => {
-//     if (event.target.classList.contains("li-element")) {
-//       if (event.target.style.textDecoration == "line-through") {
-//         event.target.style.textDecoration = "";
-//       } else {
-//         event.target.style.textDecoration = "line-through";
-//       }
-//     }
-//   });
-// }
+

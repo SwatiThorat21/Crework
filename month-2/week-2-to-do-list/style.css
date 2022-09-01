@@ -40,6 +40,39 @@ body{
     font-size: 2.2em;
 }
 
+.input-container input {
+    padding: 0.6em;
+    width: 23em;
+    margin-top: 1.5em;
+    float: left;
+    background-color:rgb(183, 185, 188);
+    border: none;
+    border-radius: 0.3em;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 1.1em;
+    letter-spacing: 0.04em;
+}
+
+.input-container{
+    position: relative;
+}
+
+.input-container i{
+    margin-top: 1.67em;
+    text-align: center;
+    padding: 0.85em;
+    font-size: 1em;
+    font-weight: 800;
+    background-color: #790979;
+    cursor: pointer;
+    border-radius: 0.3em;
+}
+.error-msg{
+    color: rgb(221, 34, 34);
+    font-size: 1em;
+    text-align: center;
+  }
+
 .li-item{
    
     padding: 0.65em;
@@ -55,60 +88,50 @@ body{
 .li-element{
     background-color: rgb(183, 185, 188);
     border: none;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 1.1em;
+    letter-spacing: 0.04em;
     }
 
 .li-element:focus {
     outline: none; 
     border: 0;
 } 
-#i-tags{
+.editBtn{
+    position: absolute;
+    top: 0;
+    right: 2.5em;
+    margin-right: 1px;
+}
+
+.deleteBtn{
     position: absolute;
     top: 0;
     right: 0;
-    
 }
+
+.saveBtn{
+    position: absolute;
+    top: 0;
+    right: 2.5em;
+    margin-right: 1px;
+}
+
 .li-item i{
     text-align: center;
-    padding: 0.75em;
+    padding: 0.8em;
     font-size: 1em;
     font-weight: 800;
     background-color: #790979;
-    margin-right: -2px;
     color: white;
     cursor: pointer;
-  
 }
 
-.input-container input {
-    padding: 0.95em;
-    width: 30em;
-    margin-top: 1.5em;
-    float: left;
-    background-color:rgb(183, 185, 188);
-    border: none;
-    border-radius: 0.3em;
-    font-family: 'Bubblegum Sans', cursive;
-  
+.checkbox{
+   margin-right: 1em;
 }
 
-.input-container{
-    position: relative;
-}
 
-.input-container i{
-    margin-top: 1.3em;
-    text-align: center;
-    padding: 0.77em;
-    font-size: 1em;
-    font-weight: 800;
-    background-color: #790979;
-    cursor: pointer;
-}
-.error-msg{
-    color: rgb(221, 34, 34);
-    font-size: 1em;
-    text-align: center;
-  }
 
 
 
