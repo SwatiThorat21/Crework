@@ -11,12 +11,12 @@ addBtn.addEventListener("click", () => {
   }
   let list = localStorage.getItem("list");
   if (list == null) {
-    listObj = [];
+    listArray = [];
   } else {
-    listObj = JSON.parse(list);
+    listArray = JSON.parse(list);
   }
-  listObj.push(addInput.value);
-  localStorage.setItem("list", JSON.stringify(listObj));
+  listArray.push(addInput.value);
+  localStorage.setItem("list", JSON.stringify(listArray));
 
   addInput.value = "";
   showList();
@@ -25,26 +25,28 @@ addBtn.addEventListener("click", () => {
 function showList() {
   let list = localStorage.getItem("list");
   if (list == null) {
-    listObj = [];
+    listArray = [];
   } else {
-    listObj = JSON.parse(list);
+    listArray = JSON.parse(list);
   }
 
   let html = "";
-  listObj.forEach((element) => {
+  listArray.forEach((element) => {
     html += `
     <ul>  
     <div class="li-item"> 
+    <input type = "checkbox" class="checkbox"/>
     <input value="${element}" class="li-element" readonly/>
     <div id="i-tags">
     <i class="fa-regular editBtn fa-pen-clip"></i>
+    <i class="fa-solid saveBtn fa-floppy-disk" style="display:none"></i>
     <i class="fa-regular deleteBtn fa-trash-can"></i>
     </div>
     </ul>
     `;
   });
   let listItems = document.getElementById("listItems");
-  if (listObj.length != 0) {
+  if (listArray.length != 0) {
     listItems.innerHTML = html;
   } else {
     listItems.innerHTML = `Please add your To Do !!`;
@@ -54,9 +56,9 @@ function showList() {
   deleteBtns.forEach((deleteBtn) => {
     deleteBtn.addEventListener("click", (index) => {
       let list = localStorage.getItem("list");
-      listObj = JSON.parse(list);
-      listObj.splice(index, 1);
-      localStorage.setItem("list", JSON.stringify(listObj));
+      listArray = JSON.parse(list);
+      listArray.splice(index, 1);
+      localStorage.setItem("list", JSON.stringify(listArray));
       showList();
     });
   });
@@ -64,19 +66,61 @@ function showList() {
   let editBtns = document.querySelectorAll(".editBtn");
   editBtns.forEach((editBtn) => {
     editBtn.addEventListener("click", (event) => {
-      let input = event.target.parentElement.parentElement.querySelector('input');
-      input.removeAttribute('readonly');
+      let input =
+        event.target.parentElement.parentElement.querySelector(".li-element");
+      input.removeAttribute("readonly");
+      let saveBtn =
+        event.target.parentElement.parentElement.querySelector(".saveBtn");
+      saveBtn.style.display = "block";
+      let editBtn =
+        event.target.parentElement.parentElement.querySelector(".editBtn");
+      editBtn.style.display = "none";
+    });
+  });
+
+  let saveBtns = document.querySelectorAll(".saveBtn");
+  saveBtns.forEach((saveBtn, index) => {
+    saveBtn.addEventListener("click", (event) => {
+      let input =
+        event.target.parentElement.parentElement.querySelector(".li-element");
+      input.setAttribute("readonly", true);
+      let saveBtn =
+        event.target.parentElement.parentElement.querySelector(".saveBtn");
+      saveBtn.style.display = "none";
+      let editBtn =
+        event.target.parentElement.parentElement.querySelector(".editBtn");
+      editBtn.style.display = "block";
+
+      let list = localStorage.getItem("list");
+      listArray = JSON.parse(list);
+      listArray[index] = input.value;
+      localStorage.setItem("list", JSON.stringify(listArray));
     });
   });
 }
 
-document.addEventListener('click', (event) => {
-  if(event.target.classList.contains('li-element')){
-    if (event.target.style.textDecoration == "line-through") {
-      event.target.style.textDecoration = "";
+let checkbox = document.querySelectorAll(".checkbox");
+checkbox.forEach((checklist) => {
+  checklist.addEventListener("click", (event) => {
+    let checkbox = event.target;
+    let input = checkbox.parentElement.querySelector(".li-element");
+    if (checkbox.checked) {
+      input.style.textDecoration = "line-through";
     } else {
-      event.target.style.textDecoration = "line-through";
+      input.style.textDecoration = "none";
     }
-  }
-
+  });
 });
+
+// function taskComplete() {
+//   let checkbox = document.getElementsByClassName("checkbox");
+//   checkbox.addEventListener("click", (event) => {
+//     if (event.target.classList.contains("li-element")) {
+//       if (event.target.style.textDecoration == "line-through") {
+//         event.target.style.textDecoration = "";
+//       } else {
+//         event.target.style.textDecoration = "line-through";
+//       }
+//     }
+//   });
+// }
