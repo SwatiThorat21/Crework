@@ -54,5 +54,7 @@ form.addEventListener('submit', (e)=>{
     let searchTerm = search.value;
     if(searchTerm){
         getMovies(search_URL+'&query='+searchTerm);
+    }else{
+        getMovies(API_URL)
     }
 })
